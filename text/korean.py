@@ -402,7 +402,7 @@ if __name__ == "__main__":
     # print(g2p("In this paper, we propose 1 DSPGAN, a GAN-based universal vocoder."))
 
 
-    print(g2p(text_normalize("선생님: 안녕! 오늘, 우리는 우리 학교 뒤에... 있는 아름다운 숲을 볼거에요! 준비되었나요? 하하! 신난다~ 이럴 때에는, \"행복해\"라고 말해줘야 하지요 그런데 방금 깨진 유리 조각에 손가락을 벴고 티비를 켭니다.")))
+    print(g2p(text_normalize("그는 미인 대회 도전이라는 새로운 꿈을 품게 됐고 학교의 허락을 받아내 대회에 출전 ‘미스 콜로라도’로 뽑혔다.")))
     
     
     # all_phones = set()
