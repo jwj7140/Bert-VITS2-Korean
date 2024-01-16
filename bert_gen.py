@@ -11,7 +11,6 @@ from config import config
 
 def process_line(x):
     line, add_blank = x
-    print(line)
     device = config.bert_gen_config.device
     if config.bert_gen_config.use_multi_device:
         rank = mp.current_process()._identity
@@ -22,7 +21,6 @@ def process_line(x):
         else:
             device = torch.device("cpu")
     wav_path, _, language_str, text, phones, tone, word2ph = line.strip().split("|")
-    print(text)
     phone = phones.split(" ")
     tone = [int(i) for i in tone.split(" ")]
     word2ph = [int(i) for i in word2ph.split(" ")]

@@ -6,7 +6,7 @@ from transformers import AutoModel, AutoTokenizer
 from config import config
 
 
-LOCAL_PATH = "./bert/deberta-v3-base-korean"
+LOCAL_PATH = "./bert/kcbert-large"
 
 tokenizer = AutoTokenizer.from_pretrained(LOCAL_PATH)
 
@@ -57,5 +57,4 @@ def get_bert_feature(
         phone_level_feature.append(repeat_feature)
 
     phone_level_feature = torch.cat(phone_level_feature, dim=0)
-
     return phone_level_feature.T

@@ -92,7 +92,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
 
         spec, wav = self.get_audio(audiopath)
         sid = torch.LongTensor([int(self.spk_map[sid])])
-
+        
         return (phones, spec, wav, sid, tone, language, bert, ja_bert, en_bert, ko_bert)
 
     def get_audio(self, filename):
@@ -222,7 +222,7 @@ class TextAudioSpeakerCollate:
         bert_padded = torch.FloatTensor(len(batch), 1024, max_text_len)
         ja_bert_padded = torch.FloatTensor(len(batch), 1024, max_text_len)
         en_bert_padded = torch.FloatTensor(len(batch), 1024, max_text_len)
-        ko_bert_padded = torch.FloatTensor(len(batch), 768, max_text_len)
+        ko_bert_padded = torch.FloatTensor(len(batch), 1024, max_text_len)
 
         spec_padded = torch.FloatTensor(len(batch), batch[0][1].size(0), max_spec_len)
         wav_padded = torch.FloatTensor(len(batch), 1, max_wav_len)
@@ -269,8 +269,6 @@ class TextAudioSpeakerCollate:
             en_bert_padded[i, :, : en_bert.size(1)] = en_bert
 
             ko_bert = row[9]
-            # print(f"애애애애애앵:{ko_bert.size(1)} {i}")
-            # print(f"애애애애애앵2:{ko_bert.size}")
             ko_bert_padded[i, :, : ko_bert.size(1)] = ko_bert
 
         return (

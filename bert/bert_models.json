@@ -7,8 +7,8 @@
         "repo_id": "hfl/chinese-roberta-wwm-ext-large",
         "files": ["pytorch_model.bin"]
     },
-    "deberta-v3-base-korean": {
-        "repo_id": "team-lucid/deberta-v3-base-korean",
+    "kcbert-large": {
+        "repo_id": "beomi/kcbert-large",
         "files": ["pytorch_model.bin"]
     },
     "deberta-v3-large": {

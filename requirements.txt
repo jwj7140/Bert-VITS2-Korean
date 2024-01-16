@@ -30,3 +30,5 @@ g2p_en
 sentencepiece
 pykakasi
 langid
+jamo
+g2pk2

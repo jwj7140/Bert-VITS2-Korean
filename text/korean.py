@@ -12,7 +12,7 @@ from text.symbols import punctuation
 # from symbols import punctuation
 
 _g2p = G2p()
-LOCAL_PATH = "./bert/deberta-v3-base-korean"
+LOCAL_PATH = "./bert/kcbert-large"
 tokenizer = AutoTokenizer.from_pretrained(LOCAL_PATH)
 
 

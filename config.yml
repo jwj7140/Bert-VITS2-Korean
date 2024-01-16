@@ -102,7 +102,7 @@ webui:
   # 推理设备
   device: "cuda"
   # 模型路径
-  model: "./models/G_1000.pth"
+  model: "./models/G_44000.pth"
   # 配置文件路径
   config_path: "config.json"
   # 端口号
