@@ -288,7 +288,6 @@ def text_normalize(text):
     text = number_to_hangul(text)
     text = latin_to_hangul(text)
     text = re.sub(r"([,;.\?\!])([\w])", r"\1 \2", text)
-    text = text.replace("벴", "베였")
     return text
 
 
