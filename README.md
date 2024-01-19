@@ -13,7 +13,7 @@
 
 - [text/korean.py](./text/korean.py) 코드 추가
 
-[FENRlR/MB-iSTFT-VITS2]에서 사용된 기존 vits 한국어 코드를 활용, 한국어에는 성조가 없기에 tones를 전부 0으로 설정
+[FENRlR/MB-iSTFT-VITS2](https://github.com/FENRlR/MB-iSTFT-VITS2)에서 사용된 기존 vits 한국어 코드를 활용, 한국어에는 성조가 없기에 tones를 전부 0으로 설정
 
 - [text/korean_bert.py](./text/korean_bert.py) 코드 추가
 
