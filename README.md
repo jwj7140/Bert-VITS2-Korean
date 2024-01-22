@@ -6,6 +6,8 @@
 
 본 repository는 Bert-VITS2의 한국어 구현과 한국어 음성 합성 분야의 발전을 위해 공유되었습니다.
 
+[정보교류용 DISCORD 서버 링크](https://discord.gg/fuwUZdmQAW)
+
 ## 본 repository의 주요 변경점
 - 한국어 BERT모델로 [beomi/kcbert-large](https://huggingface.co/beomi/kcbert-large)를 사용
 
