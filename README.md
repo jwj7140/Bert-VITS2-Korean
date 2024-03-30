@@ -27,6 +27,7 @@
 
 ```
 #학습 전 config.yml 수정이 필요합니다(dataset_path 항목, 상대경로 설정)
+#또한, [wavlm-base-plus](https://huggingface.co/microsoft/wavlm-base-plus)의 pytorch_model.bin 파일이 slm/wavlm-base-plus 내부에 있어야 학습이 가능합니다.
 
 #1. 오디오 리샘플링
 python resample.py
