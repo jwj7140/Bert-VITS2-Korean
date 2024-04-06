@@ -15,13 +15,15 @@
 
 - [text/korean.py](./text/korean.py) 코드 추가
 
-[FENRlR/MB-iSTFT-VITS2](https://github.com/FENRlR/MB-iSTFT-VITS2)에서 사용된 기존 vits 한국어 코드를 활용, 한국어에는 성조가 없기에 tones를 전부 0으로 설정
+[FENRlR/MB-iSTFT-VITS2](https://github.com/FENRlR/MB-iSTFT-VITS2)에서 사용된 기존 vits 한국어 코드를 활용해 g2p함수 작성, 한국어에는 성조가 없기에 tones를 전부 0으로 설정
 
 - [text/korean_bert.py](./text/korean_bert.py) 코드 추가
 
 기존 코드 그대로 사용
 
-- [train_ms.py](./train_ms.py), [models.py](./models.py) 등 학습 코드에서 ko_bert 관련 가중치 항목 추가
+- [train_ms.py](./train_ms.py), [models.py](./models.py), [data_utils.py](./data_utils.py) 등 학습 코드에서 ko_bert 관련 가중치 항목 추가
+
+- (2024.04.07 추가) 학습 효율을 위해 [train_ms.py](./train_ms.py), [models.py](./models.py), [data_utils.py](./data_utils.py) 등 학습 코드에서 한국어를 제외한 영어, 중국어, 일본어 관련 가중치 삭제
 
 ## 학습 관련 명령어 모음
 
@@ -47,8 +49,15 @@ python train_ms.py
 
 ```./tensorboard```에서 학습 log를 확인할 수 있습니다.
 
-현재 가장 최신 코드의 학습 loss 그래프는 아래와 같습니다
+
+### 초기 코드
 
 ![loss 시도1](./img/ko_pretrain_try1_loss.png)
+
+[초기 코드](https://github.com/jwj7140/Bert-VITS2-Korean/commit/438803f92e32b129cdd52c1e90fd7cf98832cfcd)에서의 loss그래프입니다.
+
+
+### (2024.04.07 추가) 한국어를 제외한 영어, 일본어, 중국어 관련 가중치 삭제
+
 
 보이는대로, 현재 제대로 된 한국어 학습이 진행되지 않고 있습니다. 더 수정이 필요합니다.
