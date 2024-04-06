@@ -20,9 +20,6 @@
     "c_kl": 1.0,
     "c_commit": 100,
     "skip_optimizer": true,
-    "freeze_ZH_bert": false,
-    "freeze_JP_bert": false,
-    "freeze_EN_bert": false,
     "freeze_KO_bert": false,
     "freeze_emo": false
   },

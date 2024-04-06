@@ -50,12 +50,9 @@ x = np.array(
 tone = np.zeros_like(x)
 language = np.zeros_like(x)
 sid = np.array([0])
-bert = np.random.randn(x.shape[0], 1024)
-ja_bert = np.random.randn(x.shape[0], 1024)
-en_bert = np.random.randn(x.shape[0], 1024)
 ko_bert = np.random.randn(x.shape[0], 1024)
 emo = np.random.randn(512, 1)
 
-audio = Session(x, tone, language, bert, ja_bert, en_bert, emo, sid)
+audio = Session(x, tone, language, ko_bert, emo, sid)
 
 print(audio)
